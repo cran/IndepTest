@@ -43,5 +43,5 @@ MINTknown(data[,1:3],data[,4],k=20,ky=30,w=TRUE,wy=FALSE,y0=rnorm(100000))
 
 }
 \references{
-\insertRef{BS2017}{IndepTest}
+\insertRef{2017arXiv171106642B}{IndepTest}
 }

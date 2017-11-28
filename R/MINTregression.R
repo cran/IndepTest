@@ -32,7 +32,7 @@
 #' plot(lm(y~x),which=1)
 #' MINTregression(x,y,30,50,w=TRUE,rnorm(50000))  
 #'
-#' @references \insertRef{BS2017}{IndepTest}
+#' @references \insertRef{2017arXiv171106642B}{IndepTest} 
 #' 
 #' @export
 MINTregression=function(x,y,k,keps,w=FALSE,eps){

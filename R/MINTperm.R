@@ -25,7 +25,7 @@
 #' data=rmvnorm(1000,sigma=Sigma)
 #' MINTperm(data[,1:3],data[,4],k=20,w=TRUE,B=100)
 #'
-#' @references \insertRef{BS2017}{IndepTest}
+#' @references \insertRef{2017arXiv171106642B}{IndepTest}  
 #' 
 #' @export
 MINTperm=function(x,y,k,w=FALSE,B=1000){

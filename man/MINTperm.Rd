@@ -38,5 +38,5 @@ MINTperm(data[,1:3],data[,4],k=20,w=TRUE,B=100)
 
 }
 \references{
-\insertRef{BS2017}{IndepTest}
+\insertRef{2017arXiv171106642B}{IndepTest}
 }

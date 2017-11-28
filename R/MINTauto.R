@@ -26,7 +26,7 @@
 #' MINTauto(data[,1:3],data[,4],kmax=50,B1=100,B2=100)
 #'}
 #'
-#' @references \insertRef{BS2017}{IndepTest}
+#' @references \insertRef{2017arXiv171106642B}{IndepTest}   
 #' 
 #' @export
 MINTauto=function(x,y,kmax,B1=1000,B2=1000){
