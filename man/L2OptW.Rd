@@ -15,7 +15,7 @@ L2OptW(k, d)
 The weight vector that is the solution of the optimisation problem.
 }
 \description{
-Calculates a weight vector to be used for the weighted Kozachenko--Leonenko estimator. The weight vector has minimum \eqn{L_2} norm subject to the linear and sum-to-one constraints of (2) in Berrett, Samworth and Yuan (2017).
+Calculates a weight vector to be used for the weighted Kozachenko--Leonenko estimator. The weight vector has minimum \eqn{L_2} norm subject to the linear and sum-to-one constraints of (2) in Berrett, Samworth and Yuan (2018).
 }
 \examples{
 # When d < 4 there are no linear constraints and the returned vector is (0,0,...,0,1).

@@ -4,7 +4,7 @@
 \alias{KLentropy}
 \title{KLentropy}
 \usage{
-KLentropy(x, k, weights = FALSE)
+KLentropy(x, k, weights = FALSE, stderror = FALSE)
 }
 \arguments{
 \item{x}{The \eqn{n \times d} data matrix.}
@@ -12,19 +12,21 @@ KLentropy(x, k, weights = FALSE)
 \item{k}{The tuning parameter that gives the maximum number of neighbours that will be considered by the estimator.}
 
 \item{weights}{Specifies whether a weighted or unweighted estimator is used. If a weighted estimator is to be used then the default (\code{weights=TRUE}) results in the weights being calculated by \code{\link{L2OptW}}, otherwise the user may specify their own weights.}
+
+\item{stderror}{Specifies whether an estimate of the standard error of the weighted estimate is calculated. The calculation  is done using an unweighted version of the variance estimator described on page 7 of Berrett, Samworth and Yuan (2018).}
 }
 \value{
-The first element of the list is the unweighted estimator for the value of 1 up to the user-specified \eqn{k}. The second element of the list is the weighted estimator, obtained by taking the inner product between the first element of the list and the weight vector.
+The first element of the list is the unweighted estimator for the value of 1 up to the user-specified \eqn{k}. The second element of the list is the weighted estimator, obtained by taking the inner product between the first element of the list and the weight vector. If \code{stderror=TRUE} the third element of the list is an estimate of the standard error of the weighted estimate.
 }
 \description{
-Calculates the (weighted) Kozachenko--Leonenko entropy estimator studied in Berrett, Samworth and Yuan (2017), which is based on the \eqn{k}-nearest neighbour distances of the sample.
+Calculates the (weighted) Kozachenko--Leonenko entropy estimator studied in Berrett, Samworth and Yuan (2018), which is based on the \eqn{k}-nearest neighbour distances of the sample.
 }
 \examples{
-n=1000; x=rnorm(n); KLentropy(x,30)  # The true value is 0.5*log(2*pi*exp(1)) = 1.42.
-n=5000; x=matrix(rnorm(4*n),ncol=4)  # The true value is 2*log(2*pi*exp(1)) = 5.68
-KLentropy(x,30,weights=FALSE)            # Unweighted estimator
-KLentropy(x,30,weights=TRUE)                           # Weights chosen by L2OptW
-w=runif(30); w=w/sum(w); KLentropy(x,30,weights=w)  # User-specified weights 
+n=1000; x=rnorm(n); KLentropy(x,30,stderror=TRUE)   # The true value is 0.5*log(2*pi*exp(1)) = 1.42.
+n=5000; x=matrix(rnorm(4*n),ncol=4)                 # The true value is 2*log(2*pi*exp(1)) = 5.68
+KLentropy(x,30,weights=FALSE)                       # Unweighted estimator
+KLentropy(x,30,weights=TRUE)                        # Weights chosen by L2OptW
+w=runif(30); w=w/sum(w); KLentropy(x,30,weights=w)  # User-specified weights
 
 }
 \references{

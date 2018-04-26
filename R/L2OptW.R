@@ -1,7 +1,7 @@
  
 #' L2OptW
 #'
-#' Calculates a weight vector to be used for the weighted Kozachenko--Leonenko estimator. The weight vector has minimum \eqn{L_2} norm subject to the linear and sum-to-one constraints of (2) in Berrett, Samworth and Yuan (2017). 
+#' Calculates a weight vector to be used for the weighted Kozachenko--Leonenko estimator. The weight vector has minimum \eqn{L_2} norm subject to the linear and sum-to-one constraints of (2) in Berrett, Samworth and Yuan (2018). 
 #'
 #' @param k The tuning parameter that gives the number of neighbours that will be considered by the weighted Kozachenko--Leonenko estimator.
 #' @param d The dimension of the data.

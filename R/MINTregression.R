@@ -14,6 +14,7 @@
 #' @return The \eqn{p}-value corresponding the independence test carried out.
 #'
 #' @examples
+#' \donttest{
 #' # Correctly specified linear model
 #' x=runif(100,min=-1.5,max=1.5); y=x+rnorm(100)
 #' plot(lm(y~x),which=1) 
@@ -31,7 +32,8 @@
 #' y=x[,1]^3+0.3*x[,2]-0.3*x[,3]+rnorm(500)
 #' plot(lm(y~x),which=1)
 #' MINTregression(x,y,30,50,w=TRUE,rnorm(50000))  
-#'
+#' }
+#' 
 #' @references \insertRef{2017arXiv171106642B}{IndepTest} 
 #' 
 #' @export
